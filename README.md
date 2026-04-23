@@ -8,12 +8,18 @@ I deployed my personal portfolio website independently on AWS — not a guided l
 
 ## 🏗️ Architecture
 
-Internet (HTTPS)
-│
-▼  DNS + SSL
-┌─────────────────────┐         Port 3306 (TCP)        ┌────────────────────────┐
-│    EC2 Instance     │  ──────────────────────────▶   │     RDS Instance        │
-│  Amazon Linux       │                                 │  Amazon RDS MySQL       │
-│  Drupal CMS         │                                 │  Security Group (SG-B)  │
-│  Security Group (SG-A)                               │  Inbound: SG-A only     │
-└─────────────────────┘                                 └────────────────────────┘
+<img width="818" height="305" alt="Architecture" src="https://github.com/user-attachments/assets/2a1040f9-e359-465a-96e7-0fc1277e71f8" />
+
+---
+
+## ⚙️ Tech Stack
+
+| Technology        | Purpose                                              |
+|-------------------|------------------------------------------------------|
+| Amazon EC2        | Virtual server hosting the application               |
+| Amazon Linux      | OS running on the EC2 instance                       |
+| Drupal            | Content management system for the portfolio site     |
+| Amazon RDS MySQL  | Managed relational database for Drupal content       |
+| AWS Security Groups | Network-level firewall controlling inbound/outbound traffic |
+| SSL Certificate   | Encrypts traffic between users and the server        |
+| DNS Configuration | Maps custom domain to the EC2 public IP              |
