@@ -33,7 +33,7 @@ DNS resolves the custom domain to the EC2 instance's public IP. SSL terminates a
 
 **Layer 2 — Application (EC2)** The EC2 instance runs Amazon Linux with Drupal installed. This layer handles all web requests, renders pages, and communicates with the database backend. 
 
-**Layer 3 — Network Security (Security Groups)
+Layer 3 — Network Security (Security Groups)
 ** Two security groups control access: 
 - SG-A is attached to EC2 and allows inbound HTTPS from the internet. - SG-B is attached to RDS and allows inbound TCP on port 3306 — but only from SG-A. 
 The database is never exposed to the public internet. 
