@@ -23,3 +23,20 @@ I deployed my personal portfolio website independently on AWS — not a guided l
 | AWS Security Groups | Network-level firewall controlling inbound/outbound traffic |
 | SSL Certificate   | Encrypts traffic between users and the server        |
 | DNS Configuration | Maps custom domain to the EC2 public IP              |
+
+---
+
+## 🔐 Layer & Technology Breakdown 
+
+**Layer 1 — Public Access** 
+DNS resolves the custom domain to the EC2 instance's public IP. SSL terminates at the server, encrypting all traffic between the browser and the application. 
+
+**Layer 2 — Application (EC2)** The EC2 instance runs Amazon Linux with Drupal installed. This layer handles all web requests, renders pages, and communicates with the database backend. 
+
+**Layer 3 — Network Security (Security Groups)
+** Two security groups control access: 
+- SG-A is attached to EC2 and allows inbound HTTPS from the internet. - SG-B is attached to RDS and allows inbound TCP on port 3306 — but only from SG-A. 
+The database is never exposed to the public internet. 
+
+**Layer 4 — Data (RDS)** 
+Amazon RDS manages the MySQL database. Drupal reads and writes content here. The RDS instance lives in a private subnet accessible only via the EC2 security group rule. 
