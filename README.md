@@ -41,3 +41,28 @@ Two security groups control access:
 
 Layer 4 — Data (RDS)
 Amazon RDS manages the MySQL database. Drupal reads and writes content here. The RDS instance lives in a private subnet accessible only via the EC2 security group rule. 
+
+---
+
+## 📂 Repo Structure
+
+```
+
+aws-portfolio-deployment/
+│
+├── README.md                  # Project documentation (this file)
+├── architecture/
+│   └── architecture-diagram.png   # Visual architecture diagram
+├── config/
+│   ├── drupal-settings.php    # Drupal DB connection config (redacted)
+│   └── security-group-rules.md    # Notes on SG-A and SG-B configuration
+├── notes/
+│   └── troubleshooting-log.md # Debugging notes including the RDS port 3306 fix
+└── screenshots/
+└── live-site.png          # Screenshot of deployed portfolio
+
+```
+
+---
+
+
