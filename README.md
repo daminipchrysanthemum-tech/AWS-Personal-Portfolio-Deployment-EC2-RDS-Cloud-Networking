@@ -21,7 +21,7 @@ EC2 Instance (t3.micro — Amazon Linux)
 
 
 RDS Database (db.t4g.micro — MySQL)
-<img width="1545" height="262" alt="Aurora and RDS" src="https://github.com/user-attachments/assets/eb871258-6085-4a9a-b223-ea052a3dbc1f" />
+<img width="1545" height="247" alt="Aurora and RDS" src="https://github.com/user-attachments/assets/b0a86197-1879-4bd1-9fb1-fdc4ae935afb" />
 
 ---
 
