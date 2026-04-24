@@ -23,6 +23,8 @@ EC2 Instance (t3.micro — Amazon Linux)
 <img width="1567" height="236" alt="Instances" src="https://github.com/user-attachments/assets/5170d619-1402-4e40-9d34-ef9b0afa7180" />
 
 
+---
+
 RDS Database (db.t4g.micro — MySQL)
 
 
