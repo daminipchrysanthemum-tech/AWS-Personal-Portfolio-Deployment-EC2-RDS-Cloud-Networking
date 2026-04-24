@@ -67,11 +67,11 @@ aws-portfolio-deployment/
 
 ## 💡 Key Takeaways 
 
-**The problem that taught me the most:** Everything was configured — EC2 running, RDS live, Drupal installed — but Drupal kept timing out on the database connection. After checking credentials and restarting services, I traced it to one missing inbound rule: the RDS security group wasn't allowing traffic on port 3306 from the EC2 security group. 
+The problem that taught me the most: Everything was configured — EC2 running, RDS live, Drupal installed — but Drupal kept timing out on the database connection. After checking credentials and restarting services, I traced it to one missing inbound rule: the RDS security group wasn't allowing traffic on port 3306 from the EC2 security group. 
 
 One rule. That was the fix. But understanding *why* that rule had to be scoped specifically to the EC2 security group — and why opening port 3306 to 0.0.0.0/0 would expose the database to the entire internet — taught me more about cloud networking than anything I had read before. 
 
-**What I learned:**
+What I learned:
 - How AWS security groups act as stateful, layer-4 firewalls 
 - Why databases should never have public inbound rules — access should always be scoped to trusted resources 
 - How to troubleshoot connectivity issues across EC2 and RDS by isolating each layer
