@@ -1,4 +1,4 @@
-# AWS-Personal-Portfolio-Deployment-EC2-RDS-Cloud-Networking
+## AWS-Personal-Portfolio-Deployment-EC2-RDS-Cloud-Networking
 
 ## 🔍 Project Overview
 
@@ -6,9 +6,22 @@ I deployed my personal portfolio website independently on AWS — not a guided l
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture (diagram)
 
 <img width="818" height="305" alt="Architecture" src="https://github.com/user-attachments/assets/2a1040f9-e359-465a-96e7-0fc1277e71f8" />
+
+---
+
+## 📸 AWS Console — Proof of Deployment
+
+Both instances are stopped to manage costs and avoid unnecessary charges — fully operational during active development and can be restarted to demonstrate the live EC2 → RDS connection.
+
+EC2 Instance (t3.micro — Amazon Linux)
+<img width="1567" height="236" alt="Instances" src="https://github.com/user-attachments/assets/5170d619-1402-4e40-9d34-ef9b0afa7180" />
+
+
+RDS Database (db.t4g.micro — MySQL)
+<img width="1545" height="262" alt="Aurora and RDS" src="https://github.com/user-attachments/assets/eb871258-6085-4a9a-b223-ea052a3dbc1f" />
 
 ---
 
@@ -47,19 +60,19 @@ Amazon RDS manages the MySQL database. Drupal reads and writes content here. The
 ## 📂 Repo Structure
 
 ```
-
 aws-portfolio-deployment/
 │
-├── README.md                  # Project documentation (this file)
+├── README.md                        # Project documentation (this file)
 ├── architecture/
-│   └── architecture-diagram.png   # Visual architecture diagram
+│   └── architecture-diagram.png     # Visual architecture diagram
+├── screenshots/
+│   ├── ec2-instance.png             # AWS Console — EC2 instance (t3.micro)
+│   └── rds-instance.png             # AWS Console — RDS MySQL instance (db.t4g.micro)
 ├── config/
-│   ├── drupal-settings.php    # Drupal DB connection config (redacted)
-│   └── security-group-rules.md    # Notes on SG-A and SG-B configuration
-├── notes/
-│   └── troubleshooting-log.md # Debugging notes including the RDS port 3306 fix
-└── screenshots/
-└── live-site.png          # Screenshot of deployed portfolio
+│   ├── drupal-settings.php          # Drupal DB connection config (redacted)
+│   └── security-group-rules.md     # Notes on SG-A and SG-B configuration
+└── notes/
+    └── troubleshooting-log.md       # Debugging notes including the RDS port 3306 fix
 
 ```
 
@@ -75,8 +88,6 @@ What I learned:
 - How AWS security groups act as stateful, layer-4 firewalls 
 - Why databases should never have public inbound rules — access should always be scoped to trusted resources 
 - How to troubleshoot connectivity issues across EC2 and RDS by isolating each layer
- - How DNS propagation and SSL termination work in a real deployment --- 
+- How DNS propagation and SSL termination work in a real deployment  
 
-## 🛠️ AWS Services Used
-`EC2` `Amazon RDS` `MySQL` `Security Groups` `SSL` `DNS` `Amazon Linux` `Drupal`
 
