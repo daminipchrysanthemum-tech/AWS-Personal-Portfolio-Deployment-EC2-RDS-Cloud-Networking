@@ -18,13 +18,10 @@ Both instances are stopped to manage costs and avoid unnecessary charges — ful
 
 EC2 Instance (t3.micro — Amazon Linux)
 
-
 <img width="1567" height="236" alt="Instances" src="https://github.com/user-attachments/assets/5170d619-1402-4e40-9d34-ef9b0afa7180" />
 
 
-
 RDS Database (db.t4g.micro — MySQL)
-
 
 <img width="1545" height="247" alt="Aurora and RDS" src="https://github.com/user-attachments/assets/b0a86197-1879-4bd1-9fb1-fdc4ae935afb" />
 
